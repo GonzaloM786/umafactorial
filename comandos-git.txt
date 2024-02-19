@@ -1,0 +1,48 @@
+git config --global user.name "GonzaloMA"
+git config --global user.email gonzalo.mesas.aranda@uma.es
+
+1.	git clone https://github.com/GonzaloM786/umafactorial : se clona el repositorio de GitHub en el directorio actual.
+2.	Con VisualStudio se crea el fichero factorial.java y se copia dentro el código proporcionado.
+3.	git add factorial.java : se añade el fichero a la stagging area
+git commit –m “implementacion inicial” : se confirma el commit en la rama actual (main) con un mensaje
+4.	Se cambia el código
+git add factorial.java
+git commit -m "refactorizacion"
+5.	git push origin main : se actualiza el repositorio remoto
+git checkout -b recursivo : se crea una nueva rama y se cambia a ella
+6.	Se modifica el método fact()
+7.	git add factorial.java
+git commit -m "implementacion recursiva"
+git push origin recursivo : se actualiza el repositorio remoto indicando el nombre de la rama
+8.	git checkout master
+9.	Se cambia el método main()
+10.	git add factorial.java
+git commit -m "corrección números negativos"
+git push origin main
+11.	git checkout recursivo
+Se cambia el código
+git add factorial.java
+git commit -m "optimizacion"
+12.	git checkout main
+git merge recursivo : se fusiona la rama especificada con la rama actual (main)
+13.	git checkout -b refacIO
+Se cambia el código
+14.	git add factorial.java
+git commit -m "refactorizacion de metodo de entrada"
+Se cambia el código
+15.	git stash : guardamos temporalmente el código
+git checkout main
+Se cambia el código
+16.	git add factorial.java
+git commit -m "cambio de long a BingInteger"
+git push origin main
+git checkout refacIO
+git stash pop : recuperamos el código guardado
+git add factorial.java
+git commit -m "refactorizacion de metodo de salida"
+17.	git checkout main
+git merge refacIO
+18.	Se cambia el código 
+19.	git add factorial.java
+git commit -m "mezcla de rama refacIO"
+git push origin main
